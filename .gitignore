@@ -22,3 +22,8 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# prezentace: náhledy a pracovní soubory
+prezentace/nahled/
+prezentace/sheet*.jpg
+prezentace/_tmp_save.pptx
