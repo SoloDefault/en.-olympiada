@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0E0E10;
+  --color-card: #18181B;
+  --color-card2: #222226;
+  --color-yellow: #FFC531;
+  --color-muted: #A1A1AA;
+  --color-sgreen: #22C55E;
+  --color-syellow: #FACC15;
+  --color-sred: #EF4444;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+html, body, #root { background: #0E0E10; color: #fff; min-height: 100%; }
+body { margin: 0; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+.card { background: #18181B; border: 1px solid rgba(255,255,255,0.06); border-radius: 30px; }
+.g-blue { background: linear-gradient(135deg, #3B82F6, #2563EB); }
+.g-teal { background: linear-gradient(135deg, #14B8A6, #0D9488); }
+.g-orange { background: linear-gradient(135deg, #FB923C, #F97316); }
+.g-purple { background: linear-gradient(135deg, #A78BFA, #8B5CF6); }
+.g-pink { background: linear-gradient(135deg, #F472B6, #EC4899); }
+.g-sky { background: linear-gradient(135deg, #38BDF8, #0EA5E9); }
+.chip { display: inline-flex; align-items: center; gap: .4rem; padding: .45rem .9rem; border-radius: 999px; background: #18181B; border: 1px solid rgba(255,255,255,0.08); font-weight: 600; font-size: .9rem; }
+
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; border-radius: 99px; background: #2a2a2f; outline: none; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #FFC531; cursor: pointer; border: 4px solid #0E0E10; box-shadow: 0 0 0 2px #FFC531; }
+input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #FFC531; cursor: pointer; border: 4px solid #0E0E10; }

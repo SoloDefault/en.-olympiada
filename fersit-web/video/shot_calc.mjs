@@ -1,0 +1,14 @@
+import puppeteer from 'puppeteer-core';
+const exe = 'node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe';
+const browser = await puppeteer.launch({ executablePath: exe, args: ['--no-sandbox'] });
+const page = await browser.newPage();
+await page.setViewport({ width: 1600, height: 1000, deviceScaleFactor: 2 });
+await page.goto('http://localhost:4173/#/kalkulacka', { waitUntil: 'networkidle0' });
+await page.addStyleTag({ content: 'button.fixed{display:none!important}' });
+await new Promise((r) => setTimeout(r, 1200));
+await page.evaluate(() => [...document.querySelectorAll('button')].find((b) => b.innerText.includes('Byt v Energiapolis'))?.click());
+await page.waitForSelector('.whitespace-pre-wrap', { timeout: 45000 });
+await new Promise((r) => setTimeout(r, 1500));
+await page.screenshot({ path: 'public/shots/calc.png' });
+console.log(await page.evaluate(() => document.querySelector('.whitespace-pre-wrap')?.innerText));
+await browser.close();

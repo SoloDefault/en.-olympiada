@@ -1,0 +1,120 @@
+// Všechny texty UI (čeština)
+export const T = {
+  brand: 'FÉRSÍŤ',
+  claim: 'Síť platí ti, kdo ji potřebují.',
+  nav: { home: 'Domů', calc: 'Kalkulačka', semafor: 'Semafor', future: 'Za 10 let', fair: 'Férovost', rada: 'Pro Radu' },
+  ostrov: 'Ostrov',
+  band: { green: 'Zelená', yellow: 'Žlutá', red: 'Červená' },
+  nowLights: (b: string) => `Teď svítí ${b.toLowerCase()}`,
+  home: {
+    hello: 'Ahoj,',
+    bill: 'Tvůj účet za síť',
+    perYear: '/ rok',
+    cta: 'Spočítat můj účet',
+    sub: {
+      marie: 'Platíte méně než dnes. Hned od prvního roku.',
+      novakovi: 'Fotovoltaika se vyplatí dál.',
+      firma: (x: string) => `Mimo červenou ušetříte až ${x} ročně.`,
+    },
+    today: 'Semafor dnes',
+    cards: [
+      { to: '/semafor', title: 'Semafor', line: 'Živá mapa sítě', grad: 'g-teal', icon: 'semafor' },
+      { to: '/za-10-let', title: 'Za 10 let', line: 'Žádná spirála', grad: 'g-orange', icon: 'spirala' },
+      { to: '/ferovost', title: 'Férovost', line: '4 pravidla', grad: 'g-purple', icon: 'obyvatele' },
+      { to: '/pro-radu', title: 'Pro Radu', line: 'Čísla pro Radu ostrova', grad: 'g-blue', icon: 'stat' },
+    ],
+  },
+  calc: {
+    h1: 'Co to udělá s mým účtem?',
+    jistic: 'Jistič (kW)',
+    spotreba: 'Spotřeba ze sítě (kWh/rok)',
+    spotrebaF: 'Spotřeba ze sítě (MWh/rok)',
+    red: 'Podíl v červené (%)',
+    dnes: 'Dnes',
+    parts: { pripojeni: 'Připojení', jistic: 'Jistič', semafor: 'Semafor' },
+    save: 'Jak ušetřit',
+    s1: 'Perte a nabíjejte v zelené',
+    s2: 'Zmenšete jistič o 1 kW',
+    s3: 'Baterie mimo červenou',
+  },
+  sem: {
+    h1: 'Síťový semafor',
+    noc: 'Noc', poledne: 'Poledne ☀️', spicka: '17–21 h',
+    cards: {
+      green: 'Noc a polední slunce ze západu',
+      yellow: 'Běžný den',
+      red: 'Síť na maximu',
+    },
+    west: 'Vítr a slunce ze západu',
+    east: 'Města a průmysl na východě',
+    why: 'V poledne je zelené energie nejvíc — proto je síť levná.',
+    now: 'teď',
+  },
+  future: {
+    h1: 'Co bude za 10 let?',
+    old: 'Dnešní tarif', neu: 'FÉRSÍŤ',
+    c1: 'Domácnosti s FVE', c2: 'Cena kWh v dnešním tarifu', c3: 'Náklady sítě',
+    spiral: 'Dnešní tarif = spirála smrti. FÉRSÍŤ = stabilní.',
+  },
+  fair: {
+    h1: 'Co je férové?',
+    rules: [
+      { t: 'Platí, kdo síť potřebuje', s: 'Připojení a špička, ne kWh.', grad: 'g-blue', icon: 'pripojeni' },
+      { t: 'Stejná potřeba = stejná cena', s: 'Žádné skryté dotace.', grad: 'g-teal', icon: 'jistic' },
+      { t: 'Nikdo nezůstane pozadu', s: 'Postupně a se sociální pojistkou.', grad: 'g-orange', icon: 'obyvatele' },
+      { t: 'Jednoduché a stabilní', s: '3 položky, žádná spirála.', grad: 'g-purple', icon: 'semafor' },
+    ],
+    test: 'Test férovosti',
+    cols: ['Dnes', 'Jen jistič', 'FÉRSÍŤ'],
+    marie: 'Marie platí',
+    rec: 'Doporučeno',
+    matrix: [
+      ['no', 'ok', 'ok'],
+      ['no', 'warn', 'ok'],
+      ['warn', 'no', 'ok'],
+      ['warn', 'ok', 'ok'],
+    ],
+    notes: [
+      ['', '', ''],
+      ['168 vs 72 €', 'Novák 705 vs 385 €', '144 vs 145 €'],
+      ['', '+129 %', ''],
+      ['spirála +34 %', '', ''],
+    ],
+  },
+  rada: {
+    h1: 'Pro Radu ostrova',
+    benefits: [
+      { who: 'Stát', icon: 'stat', big: '0 € dotací', line: 'Síť se uživí sama, i když náklady vzrostou na 3,1 mld. €.', grad: 'g-blue' },
+      { who: 'Obyvatelé', icon: 'obyvatele', big: '−24 € ročně', line: 'Pro 3 miliony domácností bez FVE. Hned od prvního roku.', grad: 'g-teal' },
+      { who: 'Průmysl', icon: 'prumysl', big: '−9 %', line: 'Za 10 let oproti dnešnímu tarifu. A bonus za flexibilitu.', grad: 'g-orange' },
+      { who: 'Příroda', icon: 'priroda', big: '−1 GW špičky', line: 'Méně nových vedení přes krajinu a pobřeží UNESCO.', grad: 'g-pink' },
+    ],
+    trilema: 'Energetické trilema',
+    index: 'Index vyváženosti',
+    nevyresi: 'Co regulátor sám nevyřeší',
+    rows: [
+      { p: 'Energetická chudoba', who: 'Stát', s: 'sociální příspěvek, ne tarif' },
+      { p: 'Podpora fotovoltaiky', who: 'Stát', s: 'transparentně z rozpočtu, ne skrytě přes síť' },
+      { p: 'Nová vedení západ → východ', who: 'Stát + kraje', s: 'rychlejší povolování' },
+      { p: 'Chytré elektroměry pro všechny', who: 'Zákon', s: 'bez nich semafor neměříme' },
+      { p: 'Cena elektřiny a daně', who: 'Trh + stát', s: '' },
+    ],
+    ask: 'Schvalte zákon o chytrých elektroměrech. Investici 615 mil. € zaplatí síť, ne státní rozpočet: splátka 59 mil. €/rok (1,20 € měsíčně na domácnost), úspora ~100 mil. €/rok.',
+    inv: ['615 mil. €', '4,1 mil. chytrých elektroměrů', 'návratnost ~6 let'],
+    timeline: [
+      { y: '2027', t: 'Připojení + jistič' },
+      { y: '2028–2030', t: 'Elektroměry' },
+      { y: '2030+', t: 'Plný semafor' },
+    ],
+    approve: 'Schválit',
+    approved: 'Schváleno',
+  },
+} as const;
+
+// Trilema (1–5)
+export const TRILEMA = {
+  dims: ['Bezpečnost', 'Dostupnost', 'Udržitelnost'],
+  dnes: [3.0, 2.33, 3.67],
+  fersit: [4.0, 4.67, 4.0],
+};
+export const balance = (v: number[]) => 1 - (Math.max(...v) - Math.min(...v)) / 5;

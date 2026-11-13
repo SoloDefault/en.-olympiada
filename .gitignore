@@ -1,0 +1,24 @@
+# tajné klíče – NIKDY do gitu
+.env
+.env.*
+!.env.local.example
+*.local
+
+# závislosti a buildy
+node_modules/
+dist/
+fersit-web/out/
+
+# pracovní / staré soubory
+.claude/
+fersit-web/public/vo/*.mp3
+fersit-web/public/music/whoosh.wav
+video/fersit_promo.mp4
+video/_tmp.mp4
+иконки/
+фото с презентаций/
+ENOL_11.11. EnerCo Sdílení Energie.pdf
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
